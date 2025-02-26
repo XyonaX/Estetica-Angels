@@ -1,0 +1,50 @@
+---
+import "../styles/global.css";
+import Image from "astro/components/Image.astro";
+import women1 from "../assets/images/women1.png";
+import circles from "../assets/images/circles.png";
+---
+
+<section
+    class='hero relative bg-linear-to-r from-gradint-secondary to-gradint-primary'
+>
+    <div class='flex justify-items-stretch items-center'>
+        <div class='container relative hidden sm:block'>
+            <div class='hero-images relative'>
+                <Image
+                    src={women1}
+                    alt='Mujer con cabello largo'
+                    class='hero-image relative z-10'
+                    style='top: 50%; left: 50%; transform: translate(-50%, 0%);'
+                />
+                <Image
+                    src={circles}
+                    alt='Círculos decorativos'
+                    class='hero-circles absolute inset-0 z-0 hidden md:block'
+                />
+            </div>
+        </div>
+        <div>
+            <div class='hero-content text-white text-center'>
+                <h1 class='text-4xl font-bold'>
+                    Descubre tu mejor versión en <span class="font-bold text-primary">Estética Angels</span> 
+                </h1>
+                <p class='text-2xl mt-4'>
+                    💆‍♀️ Cuidado, belleza y bienestar en un solo lugar. Reserva tu
+                    turno hoy.
+                </p>
+                <button
+                type='button'
+                class='text-secondary bg-dark hover:bg-primary hover:text-white focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-4 py-2 text-center'
+                >Agenda Ahora <i class="fa-solid fa-calendar-days"></i></button
+            >
+            </div>
+        </div>
+
+        <style>
+            .hero {
+                min-height: 580px;
+            }
+        </style>
+    </div>
+</section>
